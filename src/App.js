@@ -1,18 +1,18 @@
 import {
   DEFAULT_BASE_COLOR,
   SHORT_NAMES_KEY,
-} from 'constants';
+} from './constants';
 import React, { Component } from 'react';
 import {findIndex, propEq} from 'ramda';
 import {
   getColorFromQueryVal,
   getColorObj,
-} from 'utils/color';
+} from './utils/color';
 
-import Banner from 'components/Banner';
-import Colors from 'components/Colors';
-import Controls from 'components/Controls';
-import DeprecationNotice from 'components/DeprecationNotice';
+import Banner from './components/Banner';
+import Colors from './components/Colors';
+import Controls from './components/Controls';
+import DeprecationNotice from './components/DeprecationNotice';
 
 class App extends Component {
   constructor(props) {

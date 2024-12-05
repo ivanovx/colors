@@ -2,7 +2,7 @@ import "./Controls.css";
 
 import React, { Component, PropTypes } from "react";
 
-import Adjuster from "components/Adjuster";
+import Adjuster from "../Adjuster";
 
 class Controls extends Component {
   static propTypes = {

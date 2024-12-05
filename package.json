@@ -1,5 +1,5 @@
 {
-  "name": "colorme",
+  "name": "colors",
   "description": "Visualize The CSS Color Function",
   "version": "1.0.0",
   "private": false,
@@ -7,15 +7,7 @@
     "moment": "2.19.3",
     "react-scripts": "0.8.4"
   },
-  "author": {
-    "name": "Tyler Gaw",
-    "email": "me@tylergaw.com",
-    "url": "https://tylergaw.com"
-  },
-  "license": "MIT",
-  "homepage": "http://colorme.io/",
-  "repository": "https://github.com/tylergaw/colorme",
-  "bugs": "https://github.com/tylergaw/colorme/issues",
+  "license": "Apache-2.0",
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -28,10 +20,8 @@
     "tinycolor2": "1.4.1"
   },
   "scripts": {
-    "start": "NODE_PATH=src react-scripts start",
-    "build": "NODE_PATH=src react-scripts build && yarn generate-sw",
-    "test": "NODE_PATH=src react-scripts test --env=jsdom",
-    "predeploy": "NODE_PATH=src yarn build",
-    "generate-sw": "node scripts/generate-sw.js"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test"
   }
 }
