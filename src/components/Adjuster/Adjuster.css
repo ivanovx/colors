@@ -1,0 +1,184 @@
+.adjuster {
+  align-items: center;
+  box-sizing: border-box;
+  color: #252525;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-width: 9rem;
+  overflow: hidden;
+  text-align: center;
+}
+
+.adjusterLabel {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex-basis: 100%;
+  font-size: 0.9rem;
+  justify-content: center;
+  padding: 0.5rem 0.75rem;
+  position: relative;
+}
+
+.adjusterLabel input {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.checkboxCustom {
+  background-color: rgba(var(--color-accent-rgb), 0);
+  border: 1px solid var(--color-accent);
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: block;
+  height: 0.8rem;
+  margin-left: -0.9rem;
+  margin-right: 0.4rem;
+  position: relative;
+  transition: 0.1s ease;
+  width: 0.8rem;
+}
+
+.checkboxCustom::after {
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  content: "";
+  display: none;
+  height: 6px;
+  left: 3px;
+  position: absolute;
+  top: 1px;
+  transform: rotate(45deg);
+  width: 3px;
+}
+
+.adjusterLabel input:checked ~ .checkboxCustom::after {
+  display: block;
+}
+
+.adjusterLabel input:focus ~ .checkboxCustom,
+.adjusterLabel:hover .checkboxCustom,
+.adjusterLabel:focus .checkboxCustom {
+  box-shadow: 0 0 3px rgba(var(--color-accent-rgb), 0.8);
+}
+
+.adjusterLabel input:checked ~ .checkboxCustom {
+  background-color: rgba(var(--color-accent-rgb), 0.9);
+}
+
+.adjusterValue {
+  box-sizing: border-box;
+  display: flex;
+  flex-basis: 100%;
+  padding: 0.5rem 0.75rem;
+}
+
+.adjusterRangeContainer {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+}
+
+.adjusterInputContainer {
+  flex-basis: 4.8rem;
+}
+
+.adjusterValInput {
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: var(--color-accent);
+  display: block;
+  font-size: 0.9rem;
+  margin: 0;
+  padding: 0.25rem 0.1rem;
+  text-align: center;
+  width: 100%;
+}
+
+.adjusterValRange {
+  appearance: none;
+  background-color: transparent;
+  box-sizing: border-box;
+  color: var(--color-accent);
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.adjusterValRange:focus {
+  outline: none;
+}
+
+.adjusterValRange::-webkit-slider-runnable-track {
+  background-color: currentColor;
+  border-radius: 2px;
+  cursor: pointer;
+  height: 2px;
+  width: 100%;
+}
+
+.adjusterValRange::-moz-range-track {
+  background-color: currentColor;
+  border-radius: 2px;
+  cursor: pointer;
+  height: 2px;
+  width: 100%;
+}
+
+.adjusterValRange::-webkit-slider-thumb {
+  appearance: none;
+  background-color: currentColor;
+  border: 0;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  height: 1.6rem;
+  margin-top: -0.8rem;
+  transition: 0.1s ease;
+  width: 1.6rem;
+}
+
+.adjusterValRange::-webkit-slider-thumb:hover,
+.adjusterValRange::-webkit-slider-thumb:active {
+  margin-top: -1.8rem;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.adjusterValRange::-moz-range-thumb {
+  appearance: none;
+  background-color: currentColor;
+  border: 0;
+  border-radius: 1rem;
+  cursor: pointer;
+  height: 0.75rem;
+  transition: 0.1s ease;
+  width: 0.75rem;
+}
+
+.adjusterValRange::-moz-range-thumb:hover,
+.adjusterValRange::-moz-range-thumb:active {
+  margin-top: -0.5rem;
+  height: 1.1rem;
+  width: 1.1rem;
+}
+
+@media (hover) {
+  .adjusterValRange::-webkit-slider-thumb {
+    border-radius: 1rem;
+    height: 0.75rem;
+    margin-top: -0.3rem;
+    width: 0.75rem;
+  }
+
+  .adjusterValRange::-webkit-slider-thumb:hover,
+  .adjusterValRange::-webkit-slider-thumb:active {
+    margin-top: -0.5rem;
+    height: 1.1rem;
+    width: 1.1rem;
+  }
+}

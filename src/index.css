@@ -1,0 +1,122 @@
+html {
+  --color-accent: #b42e8a;
+  --color-accent-rgb: 180, 46, 138;
+}
+
+html,
+.root {
+  height: 100%;
+}
+
+body {
+  background-color: #fff;
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Karla", helvetica, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+input {
+  font-family: "Cousine", monospace;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+}
+
+label {
+  display: block;
+  font-size: 1.2rem;
+}
+
+a,
+.btnText {
+  background-color: rgba(242, 17, 7, 0);
+  border: 0;
+  border-bottom: 2px solid rgba(var(--color-accent-rgb), 0.15);
+  color: var(--color-accent);
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.1s ease;
+}
+
+a:hover,
+a:focus,
+.btnText:hover,
+.btnText:focus {
+  background-color: rgba(242, 17, 7, 0.1);
+  border-color: var(--color-accent);
+}
+
+a:focus,
+.btnText:focus {
+  box-shadow: 0 0 3px rgba(var(--color-accent-rgb), 0.8);
+  outline: none;
+}
+
+.btnText {
+  border-radius: 0;
+  font-family: "Karla", helvetica, sans-serif;
+  font-size: 0.75rem;
+  padding: 0.2rem 0;
+}
+
+.btnText.deprecated {
+  border-bottom-color: #dedede;
+  color: #c6c6c6;
+}
+
+label .btnText {
+  margin-left: 1rem;
+  position: relative;
+}
+
+label .btnText::before {
+  content: "|";
+  display: inline-block;
+  left: -0.5rem;
+  position: relative;
+}
+
+main {
+  align-items: flex-start;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.resetInput {
+  appearance: none;
+  background-color: transparent;
+  border-radius: 0;
+  cursor: text;
+  box-sizing: border-box;
+  display: block;
+  transition: 0.2s ease;
+  width: 100%;
+}
+
+@media (min-height: 40em) and (max-width: 45em) {
+  main {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+}
+
+@media (min-height: 27em) and (min-width: 45em) {
+  main {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+}
