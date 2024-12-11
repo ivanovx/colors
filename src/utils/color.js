@@ -1,6 +1,6 @@
 import {
   DEFAULT_ADJUSTERS,
-} from 'constants';
+} from '../constants';
 import color from 'color';
 import colorFn from 'css-color-function';
 import tinycolor from 'tinycolor2';
