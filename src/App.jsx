@@ -141,16 +141,17 @@ export default function App() {
         selectedFormat,
         useShortNames
       } = state;
-  
+
       const isToggle = event.target.type === 'checkbox';
       const adjusterName = event.target.name.replace('Value', '');
       const nextAdjusters = [...adjusters];
-      const index = findIndex(propEq('name', adjusterName))(nextAdjusters);
+      const index = findIndex(propEq('name', adjusterName))(nextAdjusters); // todo
       let adjuster = nextAdjusters[index];
   
       if (isToggle) {
         adjuster.enabled = !nextAdjusters[index].enabled;
       } else {
+        console.log(event.target.value)
         adjuster.value = parseInt(event.target.value, 10);
   
         // If the user changes an adjuster value, enable the adjuster.

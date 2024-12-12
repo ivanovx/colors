@@ -12,9 +12,6 @@
   padding: 0.75rem 0 0 0;
 }
 
-.controlsHeading.deprecated {
-  color: #c6c6c6;
-}
 
 .colorFunc {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);

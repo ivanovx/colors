@@ -2,7 +2,6 @@ import './FormatSelect.css';
 
 import React  from 'react';
 
-
 export default function FormatSelect(props) {
   const allFormatsAndOrder = [
     'hex',
@@ -78,8 +77,4 @@ export default function FormatSelect(props) {
       </svg>
     </span>
   );
-}
-
-FormatSelect.defaultProps = {
-  selectedFormatOnChange: () => {}
 }

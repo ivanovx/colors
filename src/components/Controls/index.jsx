@@ -4,14 +4,13 @@ import React from "react";
 
 import Adjuster from "../Adjuster";
 
-export default function Controls(props) {
-  const {
-    adjusters,
-    adjusterOnChange,
-    colorFuncStr,
-    shortNamesOnClick,
-    useShortNames,
-  } = props;
+export default function Controls({
+  adjusters,
+  adjusterOnChange,
+  colorFuncStr,
+  shortNamesOnClick,
+  useShortNames,
+}) {
 
   const adjusterListItems = adjusters.map((a) => {
     const props = {
@@ -29,9 +28,9 @@ export default function Controls(props) {
   return (
     <div className="controls">
       <div className="colorFunc">
-        <label className="controlsHeading deprecated" htmlFor="colorFunc">
-          [deprecated] Color function
-          <button className="btnText deprecated" onClick={shortNamesOnClick}>
+        <label className="controlsHeading" htmlFor="colorFunc">
+          Color function
+          <button className="btnText" onClick={shortNamesOnClick}>
             {useShortNames ? "Use full names" : "Use short names"}
           </button>
         </label>
@@ -51,9 +50,3 @@ export default function Controls(props) {
     </div>
   );
 }
-
-Controls.defaultProps = {
-  adjusterOnChange: () => {},
-  colorFuncStr: "",
-  shortNamesOnClick: () => {},
-};

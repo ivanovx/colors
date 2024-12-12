@@ -3,12 +3,12 @@ import React from 'react';
 import './Adjuster.css';
 
 export default function Adjuster({
-    enabled,
-    max,
-    min,
     name,
-    onChange,
-    value
+    value,
+    enabled = false,
+    max = 100,
+    min = 0,
+    onChange
 }) {
     return (
         <div className='adjuster'>
@@ -52,24 +52,3 @@ export default function Adjuster({
         </div>
     );
 }
-
-Adjuster.defaultProps = {
-    enabled: false,
-    max: 100,
-    min: 0,
-    onChange: () => {},
-    unit: ''
-}
-
-/*
- static propTypes = {
-    enabled: PropTypes.bool.isRequired,
-    max: PropTypes.number,
-    min: PropTypes.number,
-    name: PropTypes.string.isRequired,
-    onChange: PropTypes.func,
-    unit: PropTypes.string,
-    value: PropTypes.number.isRequired
-  }
-
-*/
